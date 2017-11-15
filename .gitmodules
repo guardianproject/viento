@@ -1,0 +1,3 @@
+[submodule "research/windfarm"]
+	path = research/windfarm
+	url = https://github.com/n8fr8/WindFarm.git
