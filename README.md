@@ -1,2 +1,2 @@
 # viento
-Viento: Latin America Optimization and Localization Effort
+Viento or "Wind": Off-Grid and Constrained Computing Optimization Effort 
