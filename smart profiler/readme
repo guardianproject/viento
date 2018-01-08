@@ -1,0 +1,37 @@
+INTRODUCTION
+The Smart Profiler is a pattern created as part of the Viento project. It's goal is to tune apps to the needs of individuals living in various parts of Latin America whom are often using cheap Android phones with limited data plans.
+
+
+SMART PROFILER OBJECTIVES
+To smartly conserve battery, network and storage to create lighter, less consuming apps.
+To make apps more efficient and personalized in their behavior.
+
+
+PREMISE: ONE SIZE DOES NOT FIT ALL
+People have different needs. There’s no one default. The smart profiler provides a flexible system to know the individual and to tune the app foreground and background activities to their needs, rather than having a one-size fits all solution for settings.
+
+
+THE DEFAULT: OPTIMIZED OR EVERYTHING MODE
+The default setting primarily has to deal with how the network is used. Battery settings are the same for all modes. Storage settings are handled separately depending on the state of the user's available storage on the device and SD card.
+
+- If poor network (2G, 3G or none) and/or on a low-end phone (screen resolution below 720), then assume the user has a  limited or slow data experience. Set the mode to 'Optimized'. Provide an easy way to use data in special cases as determined by the user. For example, offer the option to set certain sources as priority and provide a shortcut to use data for a given set of time.
+
+- If the network is good (4G) and the phone quality is decent (720 resolution or higher), then set the default mode to 'Everything'.
+
+
+FURTHER CUSTOMIZATIONS
+- Storage: If internal storage is low or certain app features are likely to take up a lot of space, then offer the option to put things on the SD card instead. If the user does not have an SD card, set the default for what is kept to be minimal.
+** UI example
+
+- When data starts to run out: Offer the option to temporarily wwitch to wifi only. If x% of data has been used in the month at a given time, switch to wifi only. For example — Half way through through the month, 50% of data should have been used. If data use has exceeded that to 70%, then offer to switch to wifi only if the user's settings are set to use data.
+** UI example if the user has used more data than usual for a given time
+
+
+FACTORS USED TO DETERMINE THE CUSTOMIZED DEFAULT
+- Network (2G, 3G, 4G, none or wifi): This info helps us learn about which type of network the user is typically using, and helps us make an assumption about the quality of their data plan.
+
+- Data Available: We can tell how much data has been used per the user's normal usage history.
+
+- Storage: Determine amount currently available and if there is an SD card
+
+- Phone Quality: Determined by screen resolution and memory)
