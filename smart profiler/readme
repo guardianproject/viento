@@ -23,9 +23,10 @@ FURTHER CUSTOMIZATIONS
 - Storage: If internal storage is low or certain app features are likely to take up a lot of space, then offer the option to put things on the SD card instead. If the user does not have an SD card, set the default for what is kept to be minimal.
 ** UI example
 
-- When data starts to run out: Offer the option to temporarily wwitch to wifi only. If x% of data has been used in the month at a given time, switch to wifi only. For example — Half way through through the month, 50% of data should have been used. If data use has exceeded that to 70%, then offer to switch to wifi only if the user's settings are set to use data.
+- When data starts to run out: If x% of data has been used in the month at a given time, switch to wifi only. For example — Half way through through the month, 50% of data should have been used. If data use has exceeded that to 70%, then offer to switch to wifi only if the user's settings are set to use data.
 ** UI example if the user has used more data than usual for a given time
 
+- Battery: If the phone is low-end, then the app should be proactive about preserving battery, we can automatically schedule battery-intensive or low-priority tasks to occur only when the phone is plugged in.
 
 FACTORS USED TO DETERMINE THE CUSTOMIZED DEFAULT
 - Network (2G, 3G, 4G, none or wifi): This info helps us learn about which type of network the user is typically using, and helps us make an assumption about the quality of their data plan.
@@ -34,4 +35,6 @@ FACTORS USED TO DETERMINE THE CUSTOMIZED DEFAULT
 
 - Storage: Determine amount currently available and if there is an SD card
 
-- Phone Quality: Determined by screen resolution and memory)
+- Phone Quality: Determined by screen resolution and memory
+
+- Battery: We can use the Android scheduler API to schedule tasks to only happen when plugged in.
