@@ -38,3 +38,88 @@ FACTORS USED TO DETERMINE THE CUSTOMIZED DEFAULT
 - Phone Quality: Determined by screen resolution and memory
 
 - Battery: We can use the Android scheduler API to schedule tasks to only happen when plugged in.
+
+---------------------------------------------------------------
+
+HOW THE SMART PROFILER APPLIES TO OUR 3 APPS
+
+OPEN ARCHIVE
+Use case #1: Uploading on the go
+As a journalist using my phone to conduct investigations, I want to upload pictures, videos, and interviews while I’m traveling from one place to another, so my team will be able to see them immediately.
+
+Affects: Network
+User needs:
+* Want to upload quickly
+* Want to upload over potentially bad networks
+* Need to preserve phone battery
+
+Experience:
+Optimized mode: 
+* Wifi only — *In the UI, give the user the option to use data
+* No compression
+
+Everything mode:
+* Wifi and data
+* No compression
+
+Further:
+* If poor battery, only upload when plugged in
+* Sleep if battery is below 15%
+* If an upload gets stuck or is taking too long, give the option to upload when connected to wifi or to compress
+* If the user is exceeding the normal amount of data used, prompt to switch them to wifi
+
+Use case #2: 
+As a journalist with sensitive data, I want to off load pictures from my phone as soon as possible.
+
+Affects: Storage and network
+May need to compress some media.
+
+
+F-DROID
+Use case #1: I want to get 5 apps from a person near me, but have limited storage space on my phone.
+
+User Needs
+* Easily connect to a nearby device offline to get specific apps
+* Minimize the storage space required to get the apps
+
+Experience
+Default:
+* Choose to sync F-Droid repo? Or give the option to opt out of getting the F-Droid repo or make and F-Droid Nearby only app
+
+Optimized mode:
+* Wifi only
+* Screenshots are compressed to a standard size
+* Only auto-sync screenshots for apps that are new or recently updated
+* Show previews (or the option to manually fetch) screenshots for all other apps
+
+Everything mode:
+* Wifi and data
+* Show screenshots for all apps
+
+Further: 
+* If SD card is available, move FD to SD card; Move any apps that can be on the SD card to SD card if downloaded from FD
+* Schedule app updates 
+
+
+COURIER
+Use case #1: As a user on limited bandwidth and a poor phone, I want to get the latest important stories as soon as I can.
+
+Experience:
+Optimized mode:
+* Wifi only for full media
+* Data for text only
+* Expire after reading, unless book marked
+
+Everything mode:
+* Wifi and data
+* Expire after 1 day unless book marked
+
+Customizations:
+* Choose to get previews over wifi if you don’t want everything auto-downloaded
+* Choose to get previews over data if you want more visual excitement without using a lot of data
+
+Further:
+* Wait to sync if battery is below 25%
+* If the user is exceeding the normal amount of data used, prompt to switch them to wifi
+
+
